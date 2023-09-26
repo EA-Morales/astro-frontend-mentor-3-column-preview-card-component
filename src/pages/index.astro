@@ -2,33 +2,34 @@
 import Layout from '../layouts/Layout.astro';
 
 import '../styles/styles.css';
-
-const a = 5;
 ---
 
-<Layout title='Welcome to Astro.'>
-  <main>
-    <h1 class='text-center text-8xl text-purple-400'>Hola mundo</h1>
-    <p class='text-center text-neutral-100'>El valor de a es: {a}</p>
-    <form class='text-center'>
-      <input type='text' />
-      <button type='submit' class='bg-purple-400'>send</button>
-    </form>
+<Layout title='Frontend Mentor | 3-column preview card component'>
+  <main class='px-8 pt-8'>
+    <div class='bg-yellow-200'>
+      <p>
+        Sedans Choose a sedan for its affordability and excellent fuel economy.
+        Ideal for cruising in the city or on your next road trip.
+      </p>
+    </div>
+    <div class='bg-blue-300'>
+      <p>
+        SUVs Take an SUV for its spacious interior, power, and versatility.
+        Perfect for your next family vacation and off-road adventures.
+      </p>
+    </div>
+    <div class='bg-green-200'>
+      <p>
+        Luxury Cruise in the best car brands without the bloated prices. Enjoy
+        the enhanced comfort of a luxury rental and arrive in style.
+      </p>
+    </div>
+
+    <div class='attribution'>
+      Challenge by <a
+        href='https://www.frontendmentor.io?ref=challenge'
+        target='_blank'>Frontend Mentor</a
+      >. Coded by <a href='#'>Your Name Here</a>.
+    </div>
   </main>
 </Layout>
-
-<script>
-  console.log('Hola mundo');
-
-  // select the form element
-  const form = document.querySelector('form');
-
-  // add an event listener to the form
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    //console log the input value
-    console.log(form.querySelector('input').value);
-    // reset the input value
-    form.querySelector('input').value = '';
-  });
-</script>
